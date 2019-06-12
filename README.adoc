@@ -12,7 +12,7 @@ Reference-hi (संदर्भ-हिन) **हिंदी** में आर
 
 यदि आप भाषा संदर्भ में योगदान करना चाहते हैं या मौजूदा सामग्री को संपादित करना चाहते हैं, तो आप reference-hin/AsciiDoc_sample/Reference_Terms में दो टेम्पलेट पा सकते हैं:
 
-* इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[यहाँ] रेंडर किया गया)  http://arduino.cc/en/Reference/AnalogWrite)[analogWrite] जैसे शब्दों के लिए।
+* इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[यहाँ] रेंडर किया गया)  http://arduino.cc/hi/Reference/AnalogWrite[analogWrite] जैसे शब्दों के लिए।
 * इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[यहाँ] रेंडर किया गया) link:http://arduino.cc/hi/Reference/Serial[Serial] जैसे कार्यों के समूहों के लिए|
 
 कृपया ध्यान दें कि प्रत्येक संदर्भ फ़ाइल में कम से कम एक विवरण, कुछ उदाहरण कोड और अन्य प्रासंगिक जानकारी के लिंक शामिल होने चाहिए (यह भी देखें अनुभाग)। 
