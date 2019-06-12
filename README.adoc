@@ -10,7 +10,7 @@ Reference-hi (संदर्भ-हिन) **हिंदी** में आर
 फ़ाइल नाम में कोष्ठक या किसी विशेष वर्ण का उपयोग न करें।  
 आपको AsciiDoc सिंटैक्स पर https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[reference-hi/AsciiDoc_sample/AsciiDoc_Dictionary] में एक अवलोकन मिलेगा।  इसमें टाइटल, टेक्स्ट, लिंक, इमेज, टेबल्स, कोड और विभिन्न एम्बेड (वीडियो, स्लाइड शो, ऑडियो और कोड) शामिल हैं। आप इसे https://www.arduino.cc/reference/hi/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[यहाँ प्रस्तुत देख सकते हैं]।
 
-यदि आप भाषा संदर्भ में योगदान करना चाहते हैं या मौजूदा सामग्री को संपादित करना चाहते हैं, तो आप reference-hin/AsciiDoc_sample/Reference_Terms में दो टेम्पलेट पा सकते हैं:
+यदि आप भाषा संदर्भ में योगदान करना चाहते हैं या मौजूदा सामग्री को संपादित करना चाहते हैं, तो आप reference-hi/AsciiDoc_sample/Reference_Terms में दो टेम्पलेट पा सकते हैं:
 
 * इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[यहाँ] रेंडर किया गया)  http://arduino.cc/hi/Reference/AnalogWrite[analogWrite] जैसे शब्दों के लिए।
 * इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[यहाँ] रेंडर किया गया) link:http://arduino.cc/hi/Reference/Serial[Serial] जैसे कार्यों के समूहों के लिए|
