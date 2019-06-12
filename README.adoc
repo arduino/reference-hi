@@ -58,4 +58,4 @@ reference-hi
 
 कृपया ध्यान दें कि आर्डुइनो संदर्भ में आपका योगदान क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयर अलाइक 3.0 लाइसेंस के तहत लाइसेंस प्राप्त है। कृपया इसे यहाँ  https://creativecommons.org/licenses/by-sa/3.0/ देखें|
 
-image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] यह काम https://creativecommons.org/licenses/by-sa/3.0/deed.en[क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयरएलाइक 3.0 अनपोर्टेड लाइसेंस] के तहत लाइसेंस प्राप्त है।
+image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] यह काम https://creativecommons.org/licenses/by-sa/3.0/deed.hi[क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयरएलाइक 3.0 अनपोर्टेड लाइसेंस] के तहत लाइसेंस प्राप्त है।
