@@ -1,35 +1,35 @@
-= Reference-hi
+= Reference-hi (संदर्भ-हिन)
 
-Reference-hi is the repo for the Language Reference documentation of the Arduino syntax in **Hindi**.  
-All the Reference terms files are in AsciiDoc format.
+Reference-hi (संदर्भ-हिन) **हिंदी** में आर्डुइनो सिंटैक्स के भाषा संदर्भ प्रलेखन के लिए रेपो है।  
+सभी संदर्भ शर्तें फाइलें AsciiDoc प्रारूप में हैं।
 
-Thank you for taking the time to contribute to Arduino content, this is really helpful to the whole Arduino Community. If you want to learn more on how to contribute to this project please check https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[this step by step tutorial].
+आर्डुइनो सामग्री में योगदान करने के लिए समय निकालने के लिए धन्यवाद, यह वास्तव में पूरे आर्डुइनो समुदाय के लिए उपयोगी है। यदि आप इस परियोजना में योगदान करने के तरीके के बारे में अधिक जानना चाहते हैं, तो कृपया https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[इस कदम की जाँच करें]।
 
-== Content Creation and Editing
-If you want to contribute new content, create a new file (with any text or code editor) and save it as .adoc.  
-Do not use parenthesis or any special character in the file name.  
-In https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[`reference-hi/AsciiDoc_sample/AsciiDoc_Dictionary`] you will find an overview on the AsciiDoc syntax. This includes Titles, Text, Links, Images, Tables, Code and various embeds (video, slideshow, audio and code). You can see it rendered https://www.arduino.cc/reference/hi/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[here].
+== सामग्री निर्माण और संपादन
+यदि आप नई सामग्री का योगदान करना चाहते हैं, तो एक नई फ़ाइल (किसी भी पाठ या कोड संपादक के साथ) बनाएं और इसे .adoc के रूप में सहेजें।  
+फ़ाइल नाम में कोष्ठक या किसी विशेष वर्ण का उपयोग न करें।  
+आपको AsciiDoc सिंटैक्स पर https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[reference-hi/AsciiDoc_sample/AsciiDoc_Dictionary] में एक अवलोकन मिलेगा।  इसमें टाइटल, टेक्स्ट, लिंक, इमेज, टेबल्स, कोड और विभिन्न एम्बेड (वीडियो, स्लाइड शो, ऑडियो और कोड) शामिल हैं। आप इसे https://www.arduino.cc/reference/hi/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[यहाँ प्रस्तुत देख सकते हैं]।
 
-If you want to contribute to the Language Reference or edit existing content, you can find two templates in reference-hi/AsciiDoc_sample/Reference_Terms:
+यदि आप भाषा संदर्भ में योगदान करना चाहते हैं या मौजूदा सामग्री को संपादित करना चाहते हैं, तो आप reference-hi/AsciiDoc_sample/Reference_Terms में दो टेम्पलेट पा सकते हैं:
 
-* Use https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (rendered https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[here]) for terms such as link:http://arduino.cc/hi/Reference/AnalogWrite[analogWrite].
-* Use https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (rendered https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[here]) for groups of functions such as link:http://arduino.cc/hi/Reference/Serial[Serial].
+* इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[यहाँ] रेंडर किया गया)  http://arduino.cc/hi/Reference/AnalogWrite[analogWrite] जैसे शब्दों के लिए।
+* इस्तेमाल करिये  https://raw.githubusercontent.com/arduino/reference-hi/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (जो  https://www.arduino.cc/reference/hi/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[यहाँ] रेंडर किया गया) link:http://arduino.cc/hi/Reference/Serial[Serial] जैसे कार्यों के समूहों के लिए|
 
-Please note that every Reference file should include as least a Description, some Example Code, and links to other relevant infos (See Also section). 
+कृपया ध्यान दें कि प्रत्येक संदर्भ फ़ाइल में कम से कम एक विवरण, कुछ उदाहरण कोड और अन्य प्रासंगिक जानकारी के लिंक शामिल होने चाहिए (यह भी देखें अनुभाग)। 
 
-If you need to add images to the Asciidoc please create a folder called attachments in the same directory as the Asciidoc file. Images can be saved in SVG and PNG format, max size 200KB.
+यदि आपको Asciidoc में चित्र जोड़ने की आवश्यकता है तो कृपया Asciidoc फ़ाइल के समान निर्देशिका में अनुलग्नक नामक एक फ़ोल्डर बनाएँ। छवियों को SVG और PNG प्रारूप में बचाया जा सकता है, अधिकतम आकार 200KB।
 
-== Contribute Content on Github
-If you are not familiar with Git you can contribute content directly on Github via their online interface. We put together a short Tutorial to show you how, https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[CHECK IT OUT!]
+== गिटहब (Github) पर योगदान सामग्री
+यदि आप गिट (Git) से परिचित नहीं हैं तो आप उनके ऑनलाइन इंटरफ़ेस के माध्यम से सीधे गिटहब पर सामग्री का योगदान कर सकते हैं। हमने आपको यह दिखाने के लिए एक छोटा ट्यूटोरियल रखा है कि कैसे, इसे https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[देखें]|
 
-link:https://help.github.com/articles/editing-files-in-another-user-s-repository/[You can also follow this guide] (written by the Github team) to learn how to edit an .adoc file and propose a file change to the Arduino team.  
-When suggesting a change, please follow the guidelines described in the Reference template files.
+आप .adoc फ़ाइल को संपादित करने और आर्डुइनो टीम में फ़ाइल परिवर्तन का प्रस्ताव करने के तरीके के बारे में जानने के लिए (गिटहब टीम द्वारा लिखित) इस  https://help.github.com/articles/editing-files-in-another-user-s-repository/[गाइड] का अनुसरण भी कर सकते हैं।  
+परिवर्तन का सुझाव देते समय, कृपया संदर्भ टेम्प्लेट फ़ाइलों में वर्णित दिशानिर्देशों का पालन करें।
 
 
-== Submitting a pull request
-We are glad you want to contribute to the Arduino Reference: that's the best way to help the community.
+== पुल अनुरोध (Pull Request) सबमिट करना
+हमें खुशी है कि आप आर्डुइनो संदर्भ में योगदान करना चाहते हैं: यह समुदाय की मदद करने का सबसे अच्छा तरीका है।
 
-Your contribution is adding or modifying existing code or full descriptions, please always refer to an existing issue or open a new one before contributing. 
+आपका योगदान मौजूदा कोड या पूर्ण विवरण जोड़ या संशोधित कर रहा है, कृपया हमेशा किसी मौजूदा मुद्दे को देखें या योगदान करने से पहले एक नया खोलें। 
 
 === Folder Structure
 [source]
@@ -52,10 +52,10 @@ reference-hi
 
 ----
 
-Within the Language folder, the file tree follows the same structure as in the link:https://www.arduino.cc/reference/hi[Arduino Reference webpage]
+भाषा फ़ोल्डर के भीतर, फाइल ट्री उसी संरचना का अनुसरण करता है जैसे कि https://www.arduino.cc/reference/hi[आर्डुइन संदर्भ वेबपेज] में|
 
-=== License
+=== लाइसेंस
 
-Please note that your contribution to the Arduino Reference is licensed under a Creative Commons Attribution-Share Alike 3.0 License. see https://creativecommons.org/licenses/by-sa/3.0/
+कृपया ध्यान दें कि आर्डुइनो संदर्भ में आपका योगदान क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयर अलाइक 3.0 लाइसेंस के तहत लाइसेंस प्राप्त है। कृपया इसे यहाँ  https://creativecommons.org/licenses/by-sa/3.0/ देखें|
 
-image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] This work is licensed under a link:https://creativecommons.org/licenses/by-sa/3.0/deed.hi[Creative Commons Attribution-ShareAlike 3.0 Unported License].
+image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] यह काम https://creativecommons.org/licenses/by-sa/3.0/deed.hi[क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयरएलाइक 3.0 अनपोर्टेड लाइसेंस] के तहत लाइसेंस प्राप्त है।
