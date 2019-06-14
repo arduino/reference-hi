@@ -1,7 +1,7 @@
 ---
-title: analogWrite()
-categories: [ "Functions" ]
-subCategories: [ "Analog I/O" ]
+शीर्षक: analogWrite()
+श्रेणियाँ: [ "कार्यों" ]
+उपश्रेणियों: [ "एनालॉग आई/ओ" ]
 ---
 
 
@@ -11,13 +11,13 @@ subCategories: [ "Analog I/O" ]
 = analogWrite()
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Writes an analog value (http://arduino.cc/en/Tutorial/PWM[PWM wave]) to a pin. Can be used to light a LED at varying brightnesses or drive a motor at various speeds. After a call to `analogWrite()`, the pin will generate a steady square wave of the specified duty cycle until the next call to `analogWrite()` (or a call to `digitalRead()` or `digitalWrite()`) on the same pin. 
+=== विवरण
+एक पिन करने के लिए एक अनुरूप (http://arduino.cc/en/Tutorial/PWM[PWM wave]) मूल्य लिखता है। अलग-अलग चमक पर एक एलईडी प्रकाश करने या विभिन्न गति से मोटर चलाने के लिए इस्तेमाल किया जा सकता है। `analogWrite()` के लिए एक कॉल के बाद, अगली कॉल `analogWrite()` (या `digitalRead()` या `digitalWrite()`) के लिए अगली कॉल तक पिन निर्दिष्ट कर्तव्य चक्र की एक स्थिर वर्ग तरंग उत्पन्न करेगा। उसी पिन पर| 
 [options="header"]
 |====================================================================================================
 | Board                | PWM Pins                        | PWM Frequency
@@ -53,37 +53,37 @@ The `analogWrite` function has nothing to do with the analog pins or the `analog
 
 
 [float]
-=== Returns
+=== रिटर्न
 Nothing
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
 
-// HOW TO USE SECTION STARTS
+// कैसे उपयोग करें खंड की शुरुआत
 [#howtouse]
 --
 
 [float]
-=== Example Code
-Sets the output to the LED proportional to the value read from the potentiometer.
+=== उदाहरण कोड
+पोटेंशियोमीटर से पढ़े जाने वाले मूल्य के लिए आनुपातिक एलईडी आउटपुट को सेट करता है|
 
 
 [source,arduino]
 ----
-int ledPin = 9;      // LED connected to digital pin 9
-int analogPin = 3;   // potentiometer connected to analog pin 3
-int val = 0;         // variable to store the read value
+int ledPin = 9;      // एलईडी डिजिटल पिन 9 से जुड़ा है
+int analogPin = 3;   // पोटेंशियोमीटर एनालॉग पिन 3 से जुड़ा है
+int val = 0;         // चर मान को संग्रहीत करने के लिए
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // sets the pin as output
+  pinMode(ledPin, OUTPUT);  // पिन को आउटपुट के रूप में सेट करता है
 }
 
 void loop() {
-  val = analogRead(analogPin);  // read the input pin
-  analogWrite(ledPin, val / 4); // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  val = analogRead(analogPin);  // इनपुट पिन पढ़ें
+  analogWrite(ledPin, val / 4); // analogRead मान 0 से 1023 तक जाता है, analogWrite मान 0 से 255 तक
 }
 ----
 [%hardbreaks]
@@ -91,27 +91,27 @@ void loop() {
 
 [float]
 === Notes and Warnings
-The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the `millis()` and `delay()` functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
+PWM 5 और 6 पर जेनरेट किए गए आउटपुट में उच्च-अपेक्षा वाले ड्यूटी साइकल होंगे। यह ` millis()` और `delay()` कार्यों के साथ बातचीत के कारण होता है, जो उन PWM आउटपुट उत्पन्न करने के लिए उपयोग किए जाने वाले एक ही आंतरिक टाइमर को साझा करते हैं। यह ज्यादातर कम शुल्क-चक्र सेटिंग्स (जैसे 0 - 10) पर देखा जाएगा और 0 और 6 पर पूरी तरह से आउटपुट बंद नहीं करने के परिणामस्वरूप 0 का मान हो सकता है।
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
+// यह भी देखे खंड
 [#see_also]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
-* #LANGUAGE# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
+* #भाषा# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
 
 [role="definition"]
-* #DEFINITION# http://arduino.cc/en/Tutorial/PWM[PWM^]
+* #परिभाषा# http://arduino.cc/en/Tutorial/PWM[PWM^]
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/Blink[Blink^]
+* #उदाहरण# http://arduino.cc/en/Tutorial/Blink[Blink^]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
