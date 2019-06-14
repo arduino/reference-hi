@@ -100,7 +100,7 @@ Nothing
 === यह भी देखे
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/AnalogInputPins[एनालॉग इनपुट पिन का विवरण^]
+* #उदाहरण# http://arduino.cc/en/Tutorial/AnalogInputPins[एनालॉग इनपुट पिन का विवरण^]
 
 --
 // यह भी देखे खंड का अंत
