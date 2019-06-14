@@ -20,36 +20,36 @@
 एक पिन करने के लिए एक अनुरूप (http://arduino.cc/en/Tutorial/PWM[PWM wave]) मूल्य लिखता है। अलग-अलग चमक पर एक एलईडी प्रकाश करने या विभिन्न गति से मोटर चलाने के लिए इस्तेमाल किया जा सकता है। `analogWrite()` के लिए एक कॉल के बाद, अगली कॉल `analogWrite()` (या `digitalRead()` या `digitalWrite()`) के लिए अगली कॉल तक पिन निर्दिष्ट कर्तव्य चक्र की एक स्थिर वर्ग तरंग उत्पन्न करेगा। उसी पिन पर| 
 [options="header"]
 |====================================================================================================
-| Board                | PWM Pins                        | PWM Frequency
-| Uno, Nano, Mini      | 3, 5, 6, 9, 10, 11              | 490 Hz (pins 5 and 6: 980 Hz)
-| Mega                 | 2 - 13, 44 - 46                 | 490 Hz (pins 4 and 13: 980 Hz)
-| Leonardo, Micro, Yún | 3, 5, 6, 9, 10, 11, 13          | 490 Hz (pins 3 and 11: 980 Hz)
-| Uno WiFi Rev.2       | 3, 5, 6, 9, 10                  | 976 Hz
-| MKR boards *         | 0 - 8, 10, A3 (18), A4 (19)     | 732 Hz
-| MKR1000 WiFi *       | 0 - 8, 10, 11, A3 (18), A4 (19) | 732 Hz
-| Zero *               | 3 - 13, A0 (14), A1 (15)        | 732 Hz
-| Due **               | 2-13                            | 1000 Hz
-| 101                  | 3, 5, 6, 9                      | pins 3 and 9: 490 Hz, pins 5 and 6: 980 Hz
+| बोर्ड                                    | PWM पिन                        | PWM आवृत्ति
+| उनो (UNO), नैनो (Nano), मिनी (Mini)      | 3, 5, 6, 9, 10, 11              | 490 Hz (पिन 5 और 6: 980 Hz)
+| मेगा (Mega)                             | 2 - 13, 44 - 46                 | 490 Hz (पिन 4 और 13: 980 Hz)
+| लेओनार्दो (Leonardo), माइक्रो (Micro), Yún  | 3, 5, 6, 9, 10, 11, 13          | 490 Hz (पिन 3 और 11: 980 Hz)
+| Uno WiFi Rev.2                         | 3, 5, 6, 9, 10                  | 976 Hz
+| एमकेआर (MKR) बोर्ड्स *                   | 0 - 8, 10, A3 (18), A4 (19)     | 732 Hz
+| MKR1000 WiFi *                         | 0 - 8, 10, 11, A3 (18), A4 (19) | 732 Hz
+| जीरो (Zero) *                           | 3 - 13, A0 (14), A1 (15)        | 732 Hz
+| ड्यू (Due) **                            | 2-13                            | 1000 Hz
+| 101                                    | 3, 5, 6, 9                      | पिन 3 और 9: 490 Hz, पिन 5 और 6: 980 Hz
 |====================================================================================================
-{empty}* In addition to PWM capabilities on the pins noted above, the MKR and Zero boards have true analog output when using `analogWrite()` on the `DAC0` (`A0`) pin. +
-{empty}** In addition to PWM capabilities on the pins noted above, the Due has true analog output when using `analogWrite()` on pins `DAC0` and `DAC1`.
+{empty}* उपरोक्त उल्लिखित पिनों पर PWM क्षमताओं के अलावा, एमकेआर और ज़ीरो बोर्डों का `DAC0` (`A0`) पिन पर `analogWrite()` का उपयोग करते समय सही एनालॉग आउटपुट है।. +
+{empty}** उपरोक्त उल्लिखित पिंस पर PWM क्षमताओं के अलावा, ड्यू का `DAC0` और `DAC1` पर `analogWrite()` का उपयोग करते समय ड्यू का सही एनालॉग आउटपुट होता है।.
 
 [%hardbreaks]
 
-You do not need to call `pinMode()` to set the pin as an output before calling `analogWrite()`.
+`analogWrite ()` कहने से पहले पिन को आउटपुट के रूप में सेट करने के लिए आपको `pinMode ()` को कॉल करने की आवश्यकता नहीं है।
 The `analogWrite` function has nothing to do with the analog pins or the `analogRead` function.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `analogWrite(pin, value)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin to write to. Allowed data types: `int`. +
-`value`: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: `int`.
+=== पैरामीटर
+`pin`: Arduino पिन को लिखने के लिए। अनुमत डेटा प्रकार: `int`। +
+`value`: कर्तव्य चक्र: 0 (हमेशा बंद) और 255 (हमेशा) के बीच। अनुमत डेटा प्रकार: `int`.
 
 
 [float]
@@ -90,7 +90,7 @@ void loop() {
 
 
 [float]
-=== Notes and Warnings
+=== नोट्स और चेतावनी
 PWM 5 और 6 पर जेनरेट किए गए आउटपुट में उच्च-अपेक्षा वाले ड्यूटी साइकल होंगे। यह ` millis()` और `delay()` कार्यों के साथ बातचीत के कारण होता है, जो उन PWM आउटपुट उत्पन्न करने के लिए उपयोग किए जाने वाले एक ही आंतरिक टाइमर को साझा करते हैं। यह ज्यादातर कम शुल्क-चक्र सेटिंग्स (जैसे 0 - 10) पर देखा जाएगा और 0 और 6 पर पूरी तरह से आउटपुट बंद नहीं करने के परिणामस्वरूप 0 का मान हो सकता है।
 
 --
