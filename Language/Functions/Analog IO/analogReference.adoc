@@ -1,6 +1,6 @@
 ---
 title: analogReference()
-श्रेणियाँ: [ "कार्यों" ]
+categories: [ "कार्यों" ]
 subCategories: [ "एनालॉग आई/ओ" ]
 ---
 
