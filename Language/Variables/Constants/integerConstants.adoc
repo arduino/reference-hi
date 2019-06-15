@@ -1,143 +1,143 @@
 ---
-title: Integer Constants
-categories: [ "Variables" ]
-subCategories: [ "Constants" ]
+title: पूर्णांक लगातार
+categories: [ "चर" ]
+subCategories: [ "स्थिरांक" ]
 ---
 
 
 
 
 
-= Integer Constants
+= पूर्णांक लगातार
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
 === Description
-Integer constants are numbers that are used directly in a sketch, like 123. By default, these numbers are treated as link:../../data-types/int[int] but you can change this with the U and L modifiers (see below).
+पूर्णांक स्थिरांक वे संख्याएँ होती हैं जिनका उपयोग सीधे स्केच में किया जाता है, जैसे 123। डिफ़ॉल्ट रूप से, इन संख्याओं को link:../../data-types/int[int] के रूप में माना जाता है लेकिन आप इसे U और L संशोधक के साथ बदल सकते हैं (निचे देखो)।
 [%hardbreaks]
 
-Normally, integer constants are treated as base 10 (decimal) integers, but special notation (formatters) may be used to enter numbers in other bases.
+आम तौर पर, पूर्णांक स्थिरांक को आधार 10 (दशमलव) पूर्णांक के रूप में माना जाता है, लेकिन विशेष संकेतन (स्वरूपक) का उपयोग अन्य आधारों में संख्या दर्ज करने के लिए किया जा सकता है।
 [%hardbreaks]
 
 |===
-|Base |Example |Formatter |Comment
+| आधार | उदाहरण | प्रारूप | टिप्पणी |
 
-|10 (decimal)
+|10 (दशमलव)
 |123
 |none
 |
 
-|2 (binary)
+|2 (बाइनरी)
 |B1111011
-|leading 'B'
-|only works with 8 bit values (0 to 255)   characters 0&1 valid
+|प्रमुख 'B'
+|केवल 8 बिट मूल्यों के साथ काम करता है (0 to 255)   वर्ण 0&1 मान्य
 
-|8 (octal)
+|8 (अष्टक)
 |0173
-|leading "0"
-|characters 0-7 valid
+|प्रमुख "0"
+|वर्ण 0-7 वैध
 
-|16 (hexadecimal)
+|16 (हेक्साडेसिमल)
 |0x7B
-|leading "0x"
-|characters 0-9, A-F, a-f valid
+|प्रमुख "0x"
+|वर्ण 0-9, A-F, a-f वैध
 |===
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
-// HOW TO USE SECTION STARTS
-[#howtouse]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 [float]
-== Decimal (base 10)
-This is the common-sense math with which you are acquainted. Constants without other prefixes are assumed to be in decimal format.
+== दशमलव (आधार 10)
+यह सामान्य ज्ञान का गणित है जिससे आप परिचित हैं। अन्य उपसर्गों के बिना स्थिरांक को दशमलव प्रारूप में माना जाता है।
 
 [float]
-=== Example  Code:
+=== उदाहरण कोड:
 [source,arduino]
 ----
-n = 101;  // same as 101 decimal ((1 * 10^2) + (0 * 10^1) + 1)
+n = 101;  // 101 दशमलव के समान ((1 * 10^2) + (0 * 10^1) + 1)
 ----
 [%hardbreaks]
 
 [float]
-== Binary (base 2)
-Only the characters 0 and 1 are valid.
+== बाइनरी (बेस 2)
+केवल वर्ण 0 और 1 ही मान्य हैं।
 
 [float]
-=== Example  Code:
+=== उदाहरण कोड:
 [source,arduino]
 ----
-n = B101; // same as 5 decimal ((1 * 2^2) + (0 * 2^1) + 1)
+n = B101; // 5 दशमलव के समान ((1 * 2^2) + (0 * 2^1) + 1)
 ----
 
-The binary formatter only works on bytes (8 bits) between 0 (B0) and 255 (B11111111). If it is convenient to input an int (16 bits) in binary form you can do it a two-step procedure such as:
+बाइनरी फॉर्मैटर केवल 0 (B0) और 255 (B11111111) के बीच बाइट्स (8 बिट्स) पर काम करता है। यदि द्विआधारी रूप में एक इंट (16 बिट्स) इनपुट करना सुविधाजनक है, तो आप इसे दो-चरणीय प्रक्रिया जैसे:
 [source,arduino]
 ----
-myInt = (B11001100 * 256) + B10101010;  // B11001100 is the high byte`
+myInt = (B11001100 * 256) + B10101010;  // B11001100 हाई बाइट है`
 ----
 [%hardbreaks]
 
 [float]
-== Octal (base 8)
-Only the characters 0 through 7 are valid. Octal values are indicated by the prefix "0" (zero).
+== अष्टक (आधार 8)
+केवल 7 के माध्यम से 0 अक्षर मान्य हैं। अष्ट मानों को उपसर्ग "0" (शून्य) द्वारा इंगित किया जाता है।
 
 [float]
-=== Example  Code:
+=== उदाहरण कोड:
 [source,arduino]
 ----
-n = 0101; // same as 65 decimal ((1 * 8^2) + (0 * 8^1) + 1)
+n = 0101; // 65 दशमलव के समान ((1 * 8^2) + (0 * 8^1) + 1)
 ----
-It is possible to generate a hard-to-find bug by (unintentionally) including a leading zero before a constant and having the compiler unintentionally interpret your constant as octal.
+यह एक निरंतर से पहले एक अग्रणी शून्य सहित (अनजाने में) एक कठिन-से-बग को उत्पन्न करना संभव है और संकलक अनजाने में अपने स्थिरांक को अष्टक के रूप में व्याख्या करता है।
 [%hardbreaks]
 
 [float]
-== Hexadecimal (base 16)
-Valid characters are 0 through 9 and letters A through F; A has the value 10, B is 11, up to F, which is 15. Hex values are indicated by the prefix "0x". Note that A-F may be upper (A-F) or lower case (a-f).
+== हेक्साडेसिमल (बेस 16)
+वैध वर्ण 0 से 9 होते हैं और अक्षर A से F; A का मान 10 है, B 11 है, F तक, जो 15. है। हेक्स मूल्यों को उपसर्ग "0x" द्वारा दर्शाया गया है। ध्यान दें कि A-F ऊपरी (A-F) या निचला मामला (a-f) हो सकता है।
 
 [float]
-=== Example  Code:
+=== उदाहरण कोड:
 [source,arduino]
 ----
-n = 0x101;  // same as 257 decimal ((1 * 16^2) + (0 * 16^1) + 1)
+n = 0x101;  // 257 दशमलव के समान ((1 * 16^2) + (0 * 16^1) + 1)
 ----
 [%hardbreaks]
 
 
 [float]
-=== Notes and Warnings
-*U & L formatters:*
+=== नोट्स और चेतावनी
+*U एंड L फॉर्मेटर्स:*
 
-By default, an integer constant is treated as an int with the attendant limitations in values. To specify an integer constant with another data type, follow it with:
+डिफ़ॉल्ट रूप से, पूर्णांक स्थिरांक को मानों में परिचर सीमाओं के साथ एक इंट के रूप में माना जाता है। किसी अन्य डेटा प्रकार के साथ पूर्णांक स्थिरांक निर्दिष्ट करने के लिए, इसका अनुसरण करें:
 
-  - a 'u' or 'U' to force the constant into an unsigned data format. Example: 33u
-  - a 'l' or 'L' to force the constant into a long data format. Example: 100000L
-  - a 'ul' or 'UL' to force the constant into an unsigned long constant. Example: 32767ul
+  - एक 'u' या 'U' निरंतर को एक अहस्ताक्षरित डेटा प्रारूप में मजबूर करने के लिए। उदाहरण: 33u
+  - एक 'l' या 'L' निरंतर को एक लंबे डेटा प्रारूप में मजबूर करने के लिए। उदाहरण: 100000L
+  - एक 'ul' या 'UL' एक निरंतर लंबे समय में स्थिर करने के लिए मजबूर करने के लिए। उदाहरण: 32767ul
 
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
 
 
-// SEE ALSO SECTION BEGINS
-[#see_also]
+// यह भी देखे खंड
+[#यह_भी_देखे]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
