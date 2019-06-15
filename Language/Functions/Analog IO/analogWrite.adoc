@@ -1,5 +1,5 @@
 ---
-शीर्षक: analogWrite()
+title: analogWrite()
 categories: [ "कार्यों" ]
 subCategories: [ "एनालॉग आई/ओ" ]
 ---
