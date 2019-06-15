@@ -1,50 +1,50 @@
 ---
-title: Floating Point Constants
-categories: [ "Variables" ]
-subCategories: [ "Constants" ]
+title: फ़्लोटिंग पॉइंट कॉन्स्टेंट्स
+categories: [ "चर" ]
+subCategories: [ "स्थिरांक" ]
 ---
 
 
 
 
 
-= Floating Point Constants
+= फ़्लोटिंग पॉइंट कॉन्स्टेंट्स
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Similar to integer constants, floating point constants are used to make code more readable. Floating point constants are swapped at compile time for the value to which the expression evaluates.
+=== विवरण
+पूर्णांक स्थिरांक के समान, अस्थायी बिंदु स्थिरांक का उपयोग कोड को अधिक पठनीय बनाने के लिए किया जाता है। फ्लोटिंग पॉइंट कॉन्स्टेंट्स को उस मूल्य के लिए संकलन समय पर स्वैप किया जाता है, जिसके लिए अभिव्यक्ति का मूल्यांकन किया जाता है।
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
-// HOW TO USE SECTION STARTS
-[#howtouse]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 
 [float]
-=== Example Code
+=== उदाहरण कोड
 
 [source,arduino]
 ----
-n = 0.005;  // 0.005 is a floating point constant
+n = 0.005;  // 0.005 एक स्थिर बिंदु स्थिरांक है
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Floating point constants can also be expressed in a variety of scientific notation. 'E' and 'e' are both accepted as valid exponent indicators.
+=== नोट्स और चेतावनी
+फ़्लोटिंग पॉइंट कॉन्स्टेंट्स को विभिन्न वैज्ञानिक संकेतन में भी व्यक्त किया जा सकता है। 'E' और 'e' दोनों वैध घातांक संकेतक के रूप में स्वीकार किए जाते हैं।
 [%hardbreaks]
 
 |===
-|floating-point constant |evaluates to: |also evaluates to:
+|फ़्लोटिंग-पॉइंट स्थिर |इसका मूल्यांकन करता है: |इसका भी मूल्यांकन करता है:
 
 |10.0
 |10
@@ -62,19 +62,19 @@ Floating point constants can also be expressed in a variety of scientific notati
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
 
 
-// SEE ALSO SECTION BEGINS
-[#see_also]
+// यह भी देखे खंड
+[#यह_भी_देखे]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
