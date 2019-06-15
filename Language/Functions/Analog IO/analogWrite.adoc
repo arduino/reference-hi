@@ -1,7 +1,7 @@
 ---
 title: analogWrite()
-categories: [ "Functions" ]
-subCategories: [ "Analog I/O" ]
+categories: [ "कार्यों" ]
+subCategories: [ "एनालॉग आई/ओ" ]
 ---
 
 
@@ -11,107 +11,107 @@ subCategories: [ "Analog I/O" ]
 = analogWrite()
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Writes an analog value (http://arduino.cc/en/Tutorial/PWM[PWM wave]) to a pin. Can be used to light a LED at varying brightnesses or drive a motor at various speeds. After a call to `analogWrite()`, the pin will generate a steady square wave of the specified duty cycle until the next call to `analogWrite()` (or a call to `digitalRead()` or `digitalWrite()`) on the same pin. 
+=== विवरण
+एक पिन करने के लिए एक अनुरूप (http://arduino.cc/en/Tutorial/PWM[PWM wave]) मूल्य लिखता है। अलग-अलग चमक पर एक एलईडी प्रकाश करने या विभिन्न गति से मोटर चलाने के लिए इस्तेमाल किया जा सकता है। `analogWrite()` के लिए एक कॉल के बाद, अगली कॉल `analogWrite()` (या `digitalRead()` या `digitalWrite()`) के लिए अगली कॉल तक पिन निर्दिष्ट कर्तव्य चक्र की एक स्थिर वर्ग तरंग उत्पन्न करेगा। उसी पिन पर| 
 [options="header"]
 |====================================================================================================
-| Board                | PWM Pins                        | PWM Frequency
-| Uno, Nano, Mini      | 3, 5, 6, 9, 10, 11              | 490 Hz (pins 5 and 6: 980 Hz)
-| Mega                 | 2 - 13, 44 - 46                 | 490 Hz (pins 4 and 13: 980 Hz)
-| Leonardo, Micro, Yún | 3, 5, 6, 9, 10, 11, 13          | 490 Hz (pins 3 and 11: 980 Hz)
-| Uno WiFi Rev.2       | 3, 5, 6, 9, 10                  | 976 Hz
-| MKR boards *         | 0 - 8, 10, A3 (18), A4 (19)     | 732 Hz
-| MKR1000 WiFi *       | 0 - 8, 10, 11, A3 (18), A4 (19) | 732 Hz
-| Zero *               | 3 - 13, A0 (14), A1 (15)        | 732 Hz
-| Due **               | 2-13                            | 1000 Hz
-| 101                  | 3, 5, 6, 9                      | pins 3 and 9: 490 Hz, pins 5 and 6: 980 Hz
+| बोर्ड                                    | PWM पिन                        | PWM आवृत्ति
+| उनो (UNO), नैनो (Nano), मिनी (Mini)      | 3, 5, 6, 9, 10, 11              | 490 Hz (पिन 5 और 6: 980 Hz)
+| मेगा (Mega)                             | 2 - 13, 44 - 46                 | 490 Hz (पिन 4 और 13: 980 Hz)
+| लेओनार्दो (Leonardo), माइक्रो (Micro), Yún  | 3, 5, 6, 9, 10, 11, 13          | 490 Hz (पिन 3 और 11: 980 Hz)
+| Uno WiFi Rev.2                         | 3, 5, 6, 9, 10                  | 976 Hz
+| एमकेआर (MKR) बोर्ड्स *                   | 0 - 8, 10, A3 (18), A4 (19)     | 732 Hz
+| MKR1000 WiFi *                         | 0 - 8, 10, 11, A3 (18), A4 (19) | 732 Hz
+| जीरो (Zero) *                           | 3 - 13, A0 (14), A1 (15)        | 732 Hz
+| ड्यू (Due) **                            | 2-13                            | 1000 Hz
+| 101                                    | 3, 5, 6, 9                      | पिन 3 और 9: 490 Hz, पिन 5 और 6: 980 Hz
 |====================================================================================================
-{empty}* In addition to PWM capabilities on the pins noted above, the MKR and Zero boards have true analog output when using `analogWrite()` on the `DAC0` (`A0`) pin. +
-{empty}** In addition to PWM capabilities on the pins noted above, the Due has true analog output when using `analogWrite()` on pins `DAC0` and `DAC1`.
+{empty}* उपरोक्त उल्लिखित पिनों पर PWM क्षमताओं के अलावा, एमकेआर और ज़ीरो बोर्डों का `DAC0` (`A0`) पिन पर `analogWrite()` का उपयोग करते समय सही एनालॉग आउटपुट है।. +
+{empty}** उपरोक्त उल्लिखित पिंस पर PWM क्षमताओं के अलावा, ड्यू का `DAC0` और `DAC1` पर `analogWrite()` का उपयोग करते समय ड्यू का सही एनालॉग आउटपुट होता है।.
 
 [%hardbreaks]
 
-You do not need to call `pinMode()` to set the pin as an output before calling `analogWrite()`.
+`analogWrite ()` कहने से पहले पिन को आउटपुट के रूप में सेट करने के लिए आपको `pinMode ()` को कॉल करने की आवश्यकता नहीं है।
 The `analogWrite` function has nothing to do with the analog pins or the `analogRead` function.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `analogWrite(pin, value)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin to write to. Allowed data types: `int`. +
-`value`: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: `int`.
+=== पैरामीटर
+`pin`: Arduino पिन को लिखने के लिए। अनुमत डेटा प्रकार: `int`। +
+`value`: कर्तव्य चक्र: 0 (हमेशा बंद) और 255 (हमेशा) के बीच। अनुमत डेटा प्रकार: `int`.
 
 
 [float]
-=== Returns
+=== रिटर्न
 Nothing
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
 
-// HOW TO USE SECTION STARTS
+// कैसे उपयोग करें खंड की शुरुआत
 [#howtouse]
 --
 
 [float]
-=== Example Code
-Sets the output to the LED proportional to the value read from the potentiometer.
+=== उदाहरण कोड
+पोटेंशियोमीटर से पढ़े जाने वाले मूल्य के लिए आनुपातिक एलईडी आउटपुट को सेट करता है|
 
 
 [source,arduino]
 ----
-int ledPin = 9;      // LED connected to digital pin 9
-int analogPin = 3;   // potentiometer connected to analog pin 3
-int val = 0;         // variable to store the read value
+int ledPin = 9;      // एलईडी डिजिटल पिन 9 से जुड़ा है
+int analogPin = 3;   // पोटेंशियोमीटर एनालॉग पिन 3 से जुड़ा है
+int val = 0;         // चर मान को संग्रहीत करने के लिए
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // sets the pin as output
+  pinMode(ledPin, OUTPUT);  // पिन को आउटपुट के रूप में सेट करता है
 }
 
 void loop() {
-  val = analogRead(analogPin);  // read the input pin
-  analogWrite(ledPin, val / 4); // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  val = analogRead(analogPin);  // इनपुट पिन पढ़ें
+  analogWrite(ledPin, val / 4); // analogRead मान 0 से 1023 तक जाता है, analogWrite मान 0 से 255 तक
 }
 ----
 [%hardbreaks]
 
 
 [float]
-=== Notes and Warnings
-The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the `millis()` and `delay()` functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
+=== नोट्स और चेतावनी
+PWM 5 और 6 पर जेनरेट किए गए आउटपुट में उच्च-अपेक्षा वाले ड्यूटी साइकल होंगे। यह `millis()` और `delay()` कार्यों के साथ बातचीत के कारण होता है, जो उन PWM आउटपुट उत्पन्न करने के लिए उपयोग किए जाने वाले एक ही आंतरिक टाइमर को साझा करते हैं। यह ज्यादातर कम शुल्क-चक्र सेटिंग्स (जैसे 0 - 10) पर देखा जाएगा और 0 और 6 पर पूरी तरह से आउटपुट बंद नहीं करने के परिणामस्वरूप 0 का मान हो सकता है।
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
+// यह भी देखे खंड
 [#see_also]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
-* #LANGUAGE# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
+* #भाषा# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
 
 [role="definition"]
-* #DEFINITION# http://arduino.cc/en/Tutorial/PWM[PWM^]
+* #परिभाषा# http://arduino.cc/en/Tutorial/PWM[PWM^]
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/Blink[Blink^]
+* #उदाहरण# http://arduino.cc/en/Tutorial/Blink[Blink^]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत

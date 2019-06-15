@@ -1,102 +1,102 @@
 ---
 title: analogRead()
-categories: [ "Functions" ]
-subCategories: [ "Analog I/O" ]
+categories: [ "कार्यों" ]
+subCategories: [ "एनालॉग आई/ओ" ]
 ---
 
 = analogRead()
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Reads the value from the specified analog pin. Arduino boards contain a multichannel, 10-bit analog to digital converter. This means that it will map input voltages between 0 and the operating voltage(5V or 3.3V) into integer values between 0 and 1023. On an Arduino UNO, for example, this yields a resolution between readings of: 5 volts / 1024 units or, 0.0049 volts (4.9 mV) per unit. See the table below for the usable pins, operating voltage and maximum resolution for some Arduino boards.
+=== विवरण
+निर्दिष्ट एनालॉग पिन से मान पढ़ता है। आर्डुइनो बोर्डों में एक मल्टीचैनल, डिजिटल कनवर्टर के लिए 10-बिट एनालॉग होता है। इसका मतलब है कि यह 0 और 1023 के बीच पूर्णांक मानों में 0 और ऑपरेटिंग वोल्टेज (5V या 3.3V) के बीच इनपुट वोल्टेज को मैप करेगा। एक आर्डुइनो उनो (UNO) पर, उदाहरण के लिए, यह 5 वोल्ट / 1024 इकाइयों के रीडिंग के बीच एक रिज़ॉल्यूशन देता है। , 0.0049 वोल्ट (4.9 mV) प्रति यूनिट। प्रयोग करने योग्य पिन, ऑपरेटिंग वोल्टेज और कुछ आर्डुइनो बोर्डों के लिए अधिकतम रिज़ॉल्यूशन के लिए नीचे दी गई तालिका देखें।
 
-The input range can be changed using link:../analogreference[analogReference()], while the resolution can be changed (only for Zero, Due and MKR boards) using link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()].
+इनपुट रेंज को link:../analogreference[analogReference()] का उपयोग करते हुए बदला जा सकता है, जबकि रिज़ॉल्यूशन को केवल link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()] का उपयोग करके बदला जा सकता है।.
 
-On ATmega based boards (UNO, Nano, Mini, Mega), it takes about 100 microseconds (0.0001 s) to read an analog input, so the maximum reading rate is about 10,000 times a second.
+ATmega आधारित बोर्ड (उनो (UNO), नैनो (Nano), मिनी (Mini), मेगा (Mega)) पर एनालॉग इनपुट को पढ़ने में लगभग 100 माइक्रोसेकंड (0.0001 सेकेंड) लगते हैं, इसलिए अधिकतम पढ़ने की दर लगभग 10,000 गुना दूसरी है|
 
 [options="header"]
 |===================================================
-|Board                     |Operating voltage |Usable pins |Max resolution
-|Uno                       |5 Volts           |A0 to A5    |10 bits
-|Mini, Nano                |5 Volts           |A0 to A7    |10 bits
-|Mega, Mega2560, MegaADK   |5 Volts           |A0 to A14   |10 bits
-|Micro                     |5 Volts           |A0 to A11*  |10 bits
-|Leonardo                  |5 Volts           |A0 to A11*  |10 bits
-|Zero                      |3.3 Volts         |A0 to A5    |12 bits**
-|Due                       |3.3 Volts         |A0 to A11   |12 bits**
-|MKR Family boards         |3.3 Volts         |A0 to A6    |12 bits**
+| बोर्ड                             | ऑपरेटिंग वोल्टेज | उपयोग करने योग्य पिन | अधिकतम संकल्प
+| उनो (UNO)                       |5 वोल्ट         |A0 से A5            |10 बिट्स
+| मिनी (Mini), नैनो (Nano)          |5 वोल्ट         |A0 से A7            |10 बिट्स
+| मेगा (Mega), Mega2560, MegaADK   |5 वोल्ट         |A0 से A14           |10 बिट्स
+| माइक्रो (Micro)                   |5 वोल्ट         |A0 से A11*          |10 बिट्स
+| लेओनार्दो (Leonardo)              |5 वोल्ट         |A0 से A11*          |10 बिट्स
+| जीरो (Zero)                     |3.3 वोल्ट       |A0 से A5            |12 बिट्स**
+| ड्यू (Due)                       |3.3 वोल्ट       |A0 से A11           |12 बिट्स**
+| एमकेआर (MKR) परिवार के बोर्ड्स     |3.3 वोल्ट       |A0 से A6            |12 बिट्स**
 |===================================================
 
-*A0 through A5 are labelled on the board, A6 through A11 are respectively available on pins 4, 6, 8, 9, 10, and 12 +
-**The default analogRead() resolution for these boards is 10 bits, for compatibility. You need to use link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()] to change it to 12 bits.
+*A0 से A5 को बोर्ड पर लेबल किया गया है, A6 से  A11 क्रमशः पिन 4, 6, 8, 9, 10 और 12 पर उपलब्ध हैं| +
+**इन बोर्डों के लिए डिफ़ॉल्ट analogRead() रिज़ॉल्यूशन संगतता के लिए 10 बिट्स है। इसे 12 बिट्स में बदलने के लिए आपको link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()] का उपयोग करने की आवश्यकता है|
 
 [%hardbreaks]
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `analogRead(pin)`
 
 
 [float]
-=== Parameters
-`pin`: the name of the analog input pin to read from (A0 to A5 on most boards, A0 to A6 on MKR boards, A0 to A7 on the Mini and Nano, A0 to A15 on the Mega).
+=== पैरामीटर
+`pin`: एनालॉग इनपुट पिन का नाम ज्यादातर बोर्ड पर (A0 से A5, एमकेआर (MKR) बोर्डों पर A0 से A6, मिनी (Mini) और नैनो (Nano) पर A0 से A7, मेगा (Mega) पर A0 से A15 तक)|
 
 
 [float]
-=== Returns
-The analog reading on the pin. Although it is limited to the resolution of the analog to digital converter (0-1023 for 10 bits or 0-4095 for 12 bits). Data type: `int`.
+=== रिटर्न
+पिन पर एनालॉग रीडिंग। यद्यपि यह एनालॉग से डिजिटल कनवर्टर (10 बिट्स के लिए 0-1023 या 12 बिट्स के लिए 0-4095) के संकल्प तक सीमित है। डेटा प्रकार: `int`।
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
-// HOW TO USE SECTION STARTS
+// कैसे उपयोग करें खंड की शुरुआत
 [#howtouse]
 --
 
 [float]
-=== Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-The code reads the voltage on analogPin and displays it.
+=== उदाहरण कोड
+// वर्णन करें कि उदाहरण कोड क्या है और संबंधित कोड जोड़ें   ►►►►► यह खंड अनिवार्य है ◄◄◄◄◄
+कोड analogPin पर वोल्टेज को पढ़ता है और इसे प्रदर्शित करता है।
 
 [source,arduino]
 ----
-int analogPin = A3; // potentiometer wiper (middle terminal) connected to analog pin 3
-                    // outside leads to ground and +5V
-int val = 0;  // variable to store the value read
+int analogPin = A3; // पोटेंशियोमीटर वाइपर (मध्य टर्मिनल) एनालॉग पिन 3 से जुड़ा हुआ है
+                    // बाहर ग्राउंड और 5 वोल्ट ओर जाता है
+int val = 0;  // चर मान पढ़ने के स्टोर करने के लिए
 
 void setup() {
-  Serial.begin(9600);           //  setup serial
+  Serial.begin(9600);           //  सेटअप सीरियल
 }
 
 void loop() {
-  val = analogRead(analogPin);  // read the input pin
-  Serial.println(val);          // debug value
+  val = analogRead(analogPin);  // इनपुट पिन पढ़ें
+  Serial.println(val);          // डिबग मान
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-If the analog input pin is not connected to anything, the value returned by analogRead() will fluctuate based on a number of factors (e.g. the values of the other analog inputs, how close your hand is to the board, etc.).
+=== नोट्स और चेतावनी
+यदि एनालॉग इनपुट पिन किसी भी चीज से जुड़ा नहीं है, तो analogRead() द्वारा लौटाए गए मान को कई कारकों के आधार पर उतार-चढ़ाव होगा (उदाहरण के लिए, अन्य एनालॉग इनपुट के मान, आपका हाथ बोर्ड के कितने करीब है, आदि)।
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
+// यह भी देखे खंड
 [#see_also]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
-* #LANGUAGE# link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/AnalogInputPins[Description of the analog input pins^]
+* #भाषा# link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()]
+* #उदाहरण# http://arduino.cc/en/Tutorial/AnalogInputPins[एनालॉग इनपुट पिन का विवरण^]
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत

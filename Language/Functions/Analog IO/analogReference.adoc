@@ -1,7 +1,7 @@
 ---
 title: analogReference()
-categories: [ "Functions" ]
-subCategories: [ "Analog I/O" ]
+categories: [ "कार्यों" ]
+subCategories: [ "एनालॉग आई/ओ" ]
 ---
 
 
@@ -11,96 +11,96 @@ subCategories: [ "Analog I/O" ]
 = analogReference()
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Configures the reference voltage used for analog input (i.e. the value used as the top of the input range). The options are:
+=== विवरण
+एनालॉग इनपुट के लिए उपयोग किए जाने वाले संदर्भ वोल्टेज को कॉन्फ़िगर करता है (यानी इनपुट रेंज के शीर्ष के रूप में इस्तेमाल किया गया मूल्य)। विकल्प हैं:
 
-Arduino AVR Boards (Uno, Mega, etc.)
+आर्डुइनो AVR बोर्ड्स (उनो (UNO), मेगा (Mega), आदि)
 
-* DEFAULT: the default analog reference of 5 volts (on 5V Arduino boards) or 3.3 volts (on 3.3V Arduino boards)
-* INTERNAL: an built-in reference, equal to 1.1 volts on the ATmega168 or ATmega328P and 2.56 volts on the ATmega8 (not available on the Arduino Mega)
-* INTERNAL1V1: a built-in 1.1V reference (Arduino Mega only)
-* INTERNAL2V56: a built-in 2.56V reference (Arduino Mega only)
-* EXTERNAL: the voltage applied to the AREF pin (0 to 5V only) is used as the reference.
+* DEFAULT: 5 वोल्ट (5V आर्डुइनो बोर्ड पर) या 3.3 वोल्ट (3.3V आर्डुइनो बोर्ड पर) का डिफ़ॉल्ट एनालॉग संदर्भ|
+* INTERNAL: एक निर्मित संदर्भ, ATmega168 या ATmega328P पर 1.1 वोल्ट के बराबर और ATmega8 पर 2.56 वोल्ट (आर्डुइनो मेगा (Mega) पर उपलब्ध नहीं)|
+* INTERNAL1V1: एक अंतर्निहित 1.1V संदर्भ (केवल आर्डुइनो मेगा (Mega))|
+* INTERNAL2V56: एक अंतर्निहित 2.56V संदर्भ (केवल आर्डुइनो मेगा (Mega))|
+* EXTERNAL: AREF पिन (केवल 0 से 5V) पर लागू वोल्टेज को संदर्भ के रूप में उपयोग किया जाता है।
 
-Arduino SAMD Boards (Zero, etc.)
+आर्डुइनो SAMD बोर्ड्स (जीरो (Zero), आदि)
 
-* AR_DEFAULT: the default analog reference of 3.3V
-* AR_INTERNAL: a built-in 2.23V reference
-* AR_INTERNAL1V0: a built-in 1.0V reference
-* AR_INTERNAL1V65: a built-in 1.65V reference
-* AR_INTERNAL2V23: a built-in 2.23V reference
-* AR_EXTERNAL: the voltage applied to the AREF pin is used as the reference
+* AR_DEFAULT: 3.3V का डिफ़ॉल्ट एनालॉग संदर्भ|
+* AR_INTERNAL: एक अंतर्निहित 2.23V संदर्भ|
+* AR_INTERNAL1V0: एक अंतर्निहित 1.0V संदर्भ|
+* AR_INTERNAL1V65: एक अंतर्निहित 1.65V संदर्भ|
+* AR_INTERNAL2V23: एक अंतर्निहित 2.23V संदर्भ|
+* AR_EXTERNAL: AREF पिन पर लगाए गए वोल्टेज को संदर्भ के रूप में प्रयोग किया जाता है|
 
-Arduino megaAVR Boards (Uno WiFi Rev2)
+आर्डुइनो megaAVR बोर्ड्स (Uno WiFi Rev2)
 
-* DEFAULT: a built-in 0.55V reference
-* INTERNAL: a built-in 0.55V reference
-* VDD: Vdd of the ATmega4809. 5V on the Uno WiFi Rev2
-* INTERNAL0V55: a built-in 0.55V reference
-* INTERNAL1V1: a built-in 1.1V reference
-* INTERNAL1V5: a built-in 1.5V reference
-* INTERNAL2V5: a built-in 2.5V reference
-* INTERNAL4V3: a built-in 4.3V reference
-* EXTERNAL: the voltage applied to the AREF pin (0 to 5V only) is used as the reference
+* DEFAULT: एक अंतर्निर्मित 0.55V संदर्भ|
+* INTERNAL: एक अंतर्निर्मित 0.55V संदर्भ|
+* VDD: ATmega4809 का Vdd। Uno WiFi Rev2 पर 5V|
+* INTERNAL0V55: एक अंतर्निर्मित 0.55V संदर्भ|
+* INTERNAL1V1: एक अंतर्निर्मित 1.1V संदर्भ|
+* INTERNAL1V5: एक अंतर्निर्मित 1.5V संदर्भ|
+* INTERNAL2V5: एक अंतर्निर्मित 2.5V संदर्भ|
+* INTERNAL4V3: एक अंतर्निर्मित 4.3V संदर्भ|
+* EXTERNAL: AREF पिन (केवल 0 से 5V) पर लागू वोल्टेज को संदर्भ के रूप में उपयोग किया जाता है|
 
-Arduino SAM Boards (Due)
+आर्डुइनो SAM बोर्ड्स (ड्यू)
 
-* AR_DEFAULT: the default analog reference of 3.3V. This is the only supported option for the Due.
+* AR_DEFAULT: 3.3V का डिफ़ॉल्ट एनालॉग संदर्भ। यह ड्यू के लिए एकमात्र समर्थित विकल्प है।
 
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य – विन्यास (Syntax)
 `analogReference(type)`
 
 
 [float]
-=== Parameters
-`type`: which type of reference to use (see list of options in the description).
+=== पैरामीटर
+`type`: किस प्रकार का संदर्भ उपयोग करना है (विवरण में विकल्पों की सूची देखें|
 
 
 [float]
-=== Returns
+=== रिटर्न
 Nothing
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
 
-// HOW TO USE SECTION STARTS
+// कैसे उपयोग करें खंड की शुरुआत
 [#howtouse]
 --
 
 [float]
-=== Notes and Warnings
-After changing the analog reference, the first few readings from `analogRead()` may not be accurate.
+=== नोट्स और चेतावनी
+एनालॉग संदर्भ को बदलने के बाद, `analogRead()` से पहले कुछ रीडिंग सटीक नहीं हो सकती हैं|
 
-*Don't use anything less than 0V or more than 5V for external reference voltage on the AREF pin! If you're using an external reference on the AREF pin, you must set the analog reference to EXTERNAL before calling `analogRead()`.* Otherwise, you will short together the active reference voltage (internally generated) and the AREF pin, possibly damaging the microcontroller on your Arduino board.
+*AREF पर बाहरी संदर्भ वोल्टेज के लिए 0V से कम या 5V से अधिक का उपयोग न करें! यदि आप AREF पिन पर किसी बाहरी संदर्भ का उपयोग कर रहे हैं, तो आपको `analogRead()` कहने से पहले EXTERNAL पर एनालॉग संदर्भ सेट करना होगा।* अन्यथा, आप एक साथ सक्रिय संदर्भ वोल्टेज (आंतरिक रूप से उत्पन्न) और AREF पिन, संभवतः आपके अरुडिनो बोर्ड पर माइक्रोकंट्रोलर को नुकसान पहुंचाएंगे।
 
-Alternatively, you can connect the external reference voltage to the AREF pin through a 5K resistor, allowing you to switch between external and internal reference voltages. Note that the resistor will alter the voltage that gets used as the reference because there is an internal 32K resistor on the AREF pin. The two act as a voltage divider, so, for example, 2.5V applied through the resistor will yield 2.5 * 32 / (32 + 5) = ~2.2V at the AREF pin.
+वैकल्पिक रूप से, आप बाहरी संदर्भ वोल्टेज को 5K प्रतिरोधक के माध्यम से AREF पिन से जोड़ सकते हैं, जिससे आप बाहरी और आंतरिक संदर्भ वोल्टेज के बीच स्विच कर सकते हैं. ध्यान दें कि प्रतिरोधक वोल्टेज को बदल देगा जो संदर्भ के रूप में उपयोग किया जाता है क्योंकि AREF पिन पर एक आंतरिक 32K प्रतिरोधक है। एक वोल्टेज विभक्त के रूप में दो कार्य करते हैं, इसलिए, उदाहरण के लिए, प्रतिरोधक के माध्यम से लागू 2.5V में AREF पिन पर 2.5 * 32 / (32 + 5) = ~2.2V का उत्पादन होगा|
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
+// यह भी देखे खंड
 [#see_also]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/AnalogInputPins[Description of the analog input pins^]
+* #उदाहरण# http://arduino.cc/en/Tutorial/AnalogInputPins[एनालॉग इनपुट पिन का विवरण^]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
