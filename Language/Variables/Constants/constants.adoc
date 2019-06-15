@@ -1,131 +1,131 @@
 ---
-title: constants
-categories: [ "Variables" ]
-subCategories: [ "Constants" ]
+title: स्थिरांक
+categories: [ "चर" ]
+subCategories: [ "स्थिरांक" ]
 ---
 
-= Constants
+= स्थिरांक
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-== Description
-Constants are predefined expressions in the Arduino language. They are used to make the programs easier to read. We classify constants in groups:
+== विवरण
+आर्डुइनो भाषा में लगातार पूर्वनिर्धारित भाव हैं। उनका उपयोग कार्यक्रमों को पढ़ने में आसान बनाने के लिए किया जाता है। हम समूहों में स्थिरांक को वर्गीकृत करते हैं:
 
 [float]
-== Defining Logical Levels: true and false (Boolean Constants)
-There are two constants used to represent truth and falsity in the Arduino language: `true`, and `false`.
+== तार्किक स्तर को परिभाषित करना: सही और गलत (बुलियन कॉन्स्टेंट्स)
+आर्डुइनो भाषा में सत्य और मिथ्या का प्रतिनिधित्व करने के लिए दो स्थिरांक का उपयोग किया जाता है: `true`, और `false`।
 
 [float]
 === false
-`false` is the easier of the two to define. false is defined as 0 (zero).
+`false` परिभाषित करने के लिए दो में से आसान है। गलत को 0 (शून्य) के रूप में परिभाषित किया गया है।
 [%hardbreaks]
 
 [float]
 === true
-`true` is often said to be defined as 1, which is correct, but true has a wider definition. Any integer which is non-zero is true, in a Boolean sense. So -1, 2 and -200 are all defined as true, too, in a Boolean sense.
+`true` को अक्सर 1 के रूप में परिभाषित किया जाता है, जो सही है, लेकिन सच की एक व्यापक परिभाषा है। कोई भी पूर्णांक जो गैर-शून्य है, एक बूलियन अर्थ में, सत्य है। तो -1, 2 और -200 सभी को बूलियन अर्थ में भी, सच के रूप में परिभाषित किया गया है।
 [%hardbreaks]
 
-Note that the `true` and `false` constants are typed in lowercase unlike `HIGH`, `LOW`, `INPUT`, and `OUTPUT`.
+ध्यान दें कि `true` और` false` स्थिरांक को `High`,` LOW`, `INPUT`, और `OUTPUT` के विपरीत लोअरकेस में टाइप किया जाता है। 
 [%hardbreaks]
 
 [float]
-== Defining Pin Levels: HIGH and LOW
-When reading or writing to a digital pin there are only two possible values a pin can take/be-set-to: `HIGH` and `LOW`.
+== पिन स्तर को परिभाषित करना: HIGH और LOW
+डिजिटल पिन को पढ़ते या लिखते समय केवल दो संभावित मान होते हैं जिन्हें पिन ले सकता है / सेट-टू: `HIGH` और `LOW`।
 
 [float]
 === HIGH
-The meaning of `HIGH` (in reference to a pin) is somewhat different depending on whether a pin is set to an `INPUT` or `OUTPUT`. When a pin is configured as an `INPUT` with link:../../../functions/digital-io/pinmode[pinMode()], and read with link:../../../functions/digital-io/digitalread[digitalRead()], the Arduino (ATmega) will report `HIGH` if:
+`HIGH` का अर्थ (एक पिन के संदर्भ में) कुछ हद तक इस बात पर निर्भर करता है कि क्या पिन एक `INPUT` या `OUTPUT` पर सेट है| जब पिन को link:../../../functions/digital-io/pinmode[pinMode()] के साथ `INPUT` के रूप में कॉन्फ़िगर किया गया है, और link:../../../functions/digital-io/digitalread[digitalRead()] के साथ पढ़ा जाता है, तो आर्डुइनो (ATmega) `HIGH` की रिपोर्ट करेगा यदि:
 
-  - a voltage greater than 3.0V is present at the pin (5V boards)
-  - a voltage greater than 2.0V volts is present at the pin (3.3V boards)
+  - 3.0V से अधिक वोल्टेज पिन पर मौजूद है (5V बोर्ड)
+  - 2.0V वोल्ट से अधिक का वोल्टेज पिन पर मौजूद है (3.3V बोर्ड)
 [%hardbreaks]
 
-A pin may also be configured as an INPUT with `pinMode()`, and subsequently made HIGH with link:../../../functions/digital-io/digitalwrite[digitalWrite()]. This will enable the internal 20K pullup resistors, which will _pull up_ the input pin to a `HIGH` reading unless it is pulled `LOW` by external circuitry. This can done alternatively by passing `INPUT_PULLUP` as argument to the `pinMode()` funtion, as explained in more detail in the section "Defining Digital Pins modes: INPUT, INPUT_PULLUP, and OUTPUT" further below.
+पिन को `pinMode()` के साथ INPUT के रूप में भी कॉन्फ़िगर किया जा सकता है, और बाद में इसे link:../../../functions/digital-io/digitalwrite[digitalWrite()] के साथ HIGH बनाया गया है। यह आंतरिक 20K पुलअप प्रतिरोधों को सक्षम करेगा, जो इनपुट पिन को एक `HIGH` रीडिंग तक खींच लेगा जब तक कि इसे लघु सर्किटरी द्वारा `LOW` नहीं खींच लिया जाता है। यह वैकल्पिक रूप से `INPUT_PULLUP` को `pinMode()` फ़ंक्शंस के तर्क के रूप में पारित करके किया जा सकता है, जैसा कि "डिजिटल पिन मोड को परिभाषित करना: INPUT, INPUT_PULLUP, और OUTPUT" खंड में और अधिक नीचे समझाया गया है।
 [%hardbreaks]
 
-When a pin is configured to OUTPUT with `pinMode()`, and set to `HIGH` with `digitalWrite()`, the pin is at:
+जब पिन को `pinMode()` के साथ OUTPUT में कॉन्फ़िगर किया गया है, और `digitalWrite()` के साथ `HIGH` पर सेट किया गया है, तो पिन इस पर है:
 
-  - 5 volts (5V boards)
-  - 3.3 volts (3.3V boards)
+  - 5 वोल्ट (5V बोर्ड)
+  - 3.3 वोल्ट (3.3V बोर्ड)
 
-In this state it can source current, e.g. light an LED that is connected through a series resistor to ground.
+इस स्थिति में यह वर्तमान स्रोत, उदा। एक एलईडी प्रकाश जो जमीन से एक श्रृंखला प्रतिरोध के माध्यम से जुड़ा हुआ है।
 [%hardbreaks]
 
 [float]
 === LOW
-The meaning of `LOW` also has a different meaning depending on whether a pin is set to `INPUT` or `OUTPUT`. When a pin is configured as an `INPUT` with `pinMode()`, and read with `digitalRead()`, the Arduino (ATmega) will report LOW if:
+`LOW` का अर्थ एक अलग अर्थ भी है जो इस बात पर निर्भर करता है कि कोई पिन `INPUT` या `OUTPUT` पर सेट है। जब एक पिन को `pinMode()` के साथ एक `INPUT` के रूप में कॉन्फ़िगर किया गया है, और `digitalRead()` के साथ पढ़ा जाता है, तो आर्डुइनो (ATmega) LOW होने की रिपोर्ट करेगा:
 
-  - a voltage less than 1.5V is present at the pin (5V boards)
-  - a voltage less than 1.0V (Approx) is present at the pin (3.3V boards)
+  - 1.5V से कम वोल्टेज पिन पर मौजूद है (5V बोर्ड)
+  - 1.0V (लगभग) से कम वोल्टेज पिन पर मौजूद है (3.3V बोर्ड)
 
-When a pin is configured to `OUTPUT` with `pinMode()`, and set to `LOW` with `digitalWrite()`, the pin is at 0 volts (both 5V and 3.3V boards). In this state it can sink current, e.g. light an LED that is connected through a series resistor to +5 volts (or +3.3 volts).
+जब एक पिन को `pinMode()` के साथ `OUTPUT` में कॉन्फ़िगर किया जाता है, और `digitalWrite ()` के साथ `LOW` पर सेट होता है, तो पिन 0 वोल्ट (5V और 3.3V दोनों बोर्ड) पर होता है। इस स्थिति में यह वर्तमान को डुबो सकता है, उदा। एक एलईडी प्रकाश जो +5 वोल्ट (या +3.3 वोल्ट) श्रृंखला अवरोधक के माध्यम से जुड़ा हुआ है।
 [%hardbreaks]
 
 [float]
-== Defining Digital Pins modes: INPUT, INPUT_PULLUP, and OUTPUT
-Digital pins can be used as `INPUT`, `INPUT_PULLUP`, or `OUTPUT`. Changing a pin with `pinMode()` changes the electrical behavior of the pin.
+== डिजिटल पिंस मोड को परिभाषित करना: INPUT, INPUT_PULLUP, और OUTPUT
+डिजिटल पिन को `INPUT`,`INPUT_PULLUP`, या `OUTPUT` के रूप में उपयोग किया जा सकता है। `pinMode()` के साथ एक पिन बदलने से पिन का विद्युत व्यवहार बदल जाता है।
 
 [float]
-=== Pins Configured as INPUT
-Arduino (ATmega) pins configured as `INPUT` with `pinMode()` are said to be in a _high-impedance_ state. Pins configured as `INPUT` make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 Megohms in front of the pin. This makes them useful for reading a sensor.
+=== पिन INPUT के रूप में कॉन्फ़िगर किए गए
+आर्डुइनो (ATmega) पिन को 'pinMode()' के साथ `INPUT 'के रूप में कॉन्फ़िगर किया गया है, जिसे _high-impedance_ अवस्था में कहा जाता है। `INPUT` के रूप में कॉन्फ़िगर किए गए पिन सर्किट पर बहुत छोटी मांग करते हैं कि वे नमूना कर रहे हैं, पिन के सामने 100 Megohms के एक श्रृंखला प्रतिरोधक के बराबर। यह उन्हें सेंसर पढ़ने के लिए उपयोगी बनाता है|
 [%hardbreaks]
 
-If you have your pin configured as an `INPUT`, and are reading a switch, when the switch is in the open state the input pin will be "floating", resulting in unpredictable results. In order to assure a proper reading when the switch is open, a pull-up or pull-down resistor must be used. The purpose of this resistor is to pull the pin to a known state when the switch is open. A 10 K ohm resistor is usually chosen, as it is a low enough value to reliably prevent a floating input, and at the same time a high enough value to not not draw too much current when the switch is closed. See the http://arduino.cc/en/Tutorial/DigitalReadSerial[Digital Read Serial^] tutorial for more information.
+यदि आप अपने पिन को `INPUT` के रूप में कॉन्फ़िगर करते हैं, और स्विच को पढ़ रहे हैं, जब स्विच खुली अवस्था में है तो इनपुट पिन "फ़्लोटिंग" होगा, जिसके परिणामस्वरूप अप्रत्याशित परिणाम प्राप्त होंगे। स्विच के खुले होने पर एक उचित रीडिंग का आश्वासन देने के लिए, पुल-अप या पुल-डाउन रेसिस्टर का उपयोग किया जाना चाहिए। स्विच को खोलने पर इस प्रतिरोधक का उद्देश्य किसी ज्ञात स्थिति में पिन खींचना है। एक 10 K ओम अवरोधक को आमतौर पर चुना जाता है, क्योंकि यह फ्लोटिंग इनपुट को मज़बूती से रोकने के लिए कम पर्याप्त मूल्य है, और एक ही समय में एक उच्च पर्याप्त मूल्य स्विच बंद होने पर बहुत अधिक वर्तमान नहीं खींचने के लिए। अधिक जानकारी के लिए http://arduino.cc/en/Tutorial/DigitalReadSerial[Digital Read Serial^] ट्यूटोरियल देखें।
 [%hardbreaks]
 
-If a pull-down resistor is used, the input pin will be `LOW` when the switch is open and `HIGH` when the switch is closed.
+यदि एक पुल-डाउन प्रतिरोधक का उपयोग किया जाता है, तो स्विच खुला होने पर इनपुट पिन `LOW` होगा और स्विच बंद होने पर` HIGH`।
 [%hardbreaks]
 
-If a pull-up resistor is used, the input pin will be `HIGH` when the switch is open and `LOW` when the switch is closed.
-[%hardbreaks]
-
-[float]
-=== Pins Configured as INPUT_PULLUP
-The ATmega microcontroller on the Arduino has internal pull-up resistors (resistors that connect to power internally) that you can access. If you prefer to use these instead of external pull-up resistors, you can use the `INPUT_PULLUP` argument in `pinMode()`.
-[%hardbreaks]
-
-See the http://arduino.cc/en/Tutorial/InputPullupSerial[Input Pullup Serial^] tutorial for an example of this in use.
-[%hardbreaks]
-
-Pins configured as inputs with either `INPUT` or `INPUT_PULLUP` can be damaged or destroyed if they are connected to voltages below ground (negative voltages) or above the positive power rail (5V or 3V).
+यदि एक पुल-अप रोकनेवाला का उपयोग किया जाता है, तो स्विच बंद होने पर इनपुट पिन `HIGH` होगा और स्विच बंद होने पर `LOW` होगा।
 [%hardbreaks]
 
 [float]
-=== Pins Configured as OUTPUT
-Pins configured as `OUTPUT` with `pinMode()` are said to be in a _low-impedance_ state. This means that they can provide a substantial amount of current to other circuits. ATmega pins can source (provide current) or sink (absorb current) up to 40 mA (milliamps) of current to other devices/circuits. This makes them useful for powering LEDs because LEDs typically use less than 40 mA. Loads greater than 40 mA (e.g. motors) will require a transistor or other interface circuitry.
+=== पिन INPUT_PULLUP के रूप में कॉन्फ़िगर किए गए 
+आर्डुइनो पर ATmega माइक्रोकंट्रोलर में आंतरिक पुल-अप रेसिस्टर्स (प्रतिरोधक जो आंतरिक रूप से बिजली से जुड़ते हैं) होते हैं जिन्हें आप एक्सेस कर सकते हैं। यदि आप बाहरी पुल-अप प्रतिरोधों के बजाय इनका उपयोग करना पसंद करते हैं, तो आप `pinMode()` में `INPUT_PULLUP` तर्क का उपयोग कर सकते हैं।
 [%hardbreaks]
 
-Pins configured as outputs can be damaged or destroyed if they are connected to either the ground or positive power rails.
+उपयोग में इस के उदाहरण के लिए http://arduino.cc/en/Tutorial/InputPullupSerial [Input Pullup Serial^] ट्यूटोरियल देखें।
+[%hardbreaks]
+
+यदि वे जमीन के नीचे वोल्टेज (ऋणात्मक वोल्टेज) या सकारात्मक शक्ति रेल (5V या 3V) से ऊपर वोल्टेज से जुड़े हैं तो 'INPUT' या `INPUT_PULLUP` के साथ इनपुट के रूप में कॉन्फ़िगर किए गए पिन क्षतिग्रस्त या नष्ट हो सकते हैं।
 [%hardbreaks]
 
 [float]
-== Defining built-ins: LED_BUILTIN
-Most Arduino boards have a pin connected to an on-board LED in series with a resistor. The constant `LED_BUILTIN` is the number of the pin to which the on-board LED is connected. Most boards have this LED connected to digital pin 13.
+=== पिन को OUTPUT के रूप में कॉन्फ़िगर किया गया
+`pinMode()` के साथ `OUTPUT` के रूप में कॉन्फ़िगर किए गए पिंस को _low-impedance_ अवस्था में कहा जाता है। इसका मतलब है कि वे अन्य सर्किटों को पर्याप्त मात्रा में वर्तमान प्रदान कर सकते हैं। ATmega पिन अन्य उपकरणों / सर्किटों के लिए करंट के 40 mA (milliamps) तक स्रोत (करंट प्रदान कर सकते हैं) या सिंक (करंट को अवशोषित) कर सकते हैं। यह उन्हें एल ई डी को बिजली देने के लिए उपयोगी बनाता है क्योंकि एलईडी आमतौर पर 40 एमए से कम का उपयोग करते हैं। 40 mA (जैसे मोटर्स) से अधिक भार वाले को ट्रांजिस्टर या अन्य इंटरफ़ेस सर्किट्री की आवश्यकता होगी।
+[%hardbreaks]
+
+आउटपुट के रूप में कॉन्फ़िगर किए गए पिन क्षतिग्रस्त या नष्ट हो सकते हैं यदि वे जमीन या सकारात्मक शक्ति रेल से जुड़े होते हैं।
+[%hardbreaks]
+
+[float]
+== बिल्ट-इन को परिभाषित करना: LED_BUILTIN
+अधिकांश आर्डुइनो बोर्डों में एक अवरोधक के साथ श्रृंखला में एक ऑन-बोर्ड एलईडी से जुड़ा एक पिन होता है। निरंतर `LED_BUILTIN` पिन की संख्या है जिस पर ऑन-बोर्ड एलईडी जुड़ा हुआ है। अधिकांश बोर्ड में यह एलईडी डिजिटल पिन 13 से जुड़ा है।
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
 
-// HOW TO USE SECTION STARTS
-[#howtouse]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
-// SEE ALSO  SECTION BEGINS
-[#see_also]
+// यह भी देखे खंड
+[#यह_भी_देखे]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
