@@ -17,7 +17,7 @@ subCategories: [ "रूपांतरण" ]
 
 [float]
 === विवरण
-एक मान को link:../../data-types/char[char] डेटा प्रकार में परिवर्तित करता है|
+एक मान को link:../../data-types/int[int] डेटा प्रकार में परिवर्तित करता है|
 [%hardbreaks]
 
 
