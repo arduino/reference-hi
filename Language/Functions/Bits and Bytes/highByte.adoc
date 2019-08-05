@@ -1,7 +1,7 @@
 ---
 title: highByte()
-categories: [ "Functions" ]
-subCategories: [ "Bits and Bytes" ]
+categories: [ "कार्यों" ]
+subCategories: [ "बिट्स और बाइट्स" ]
 ---
 
 
@@ -11,43 +11,43 @@ subCategories: [ "Bits and Bytes" ]
 = highByte()
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Extracts the high-order (leftmost) byte of a word (or the second lowest byte of a larger data type).
+=== विवरण
+किसी शब्द का उच्च-क्रम (सबसे बड़ा) बाइट (या किसी बड़े डेटा प्रकार का दूसरा सबसे कम बाइट) निकालता है|
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `highByte(x)`
 
 
 [float]
-=== Parameters
-`x`: a value of any type
+=== पैरामीटर
+`x`: किसी भी प्रकार का एक मूल्य
 
 
 [float]
-=== Returns
-Data type: `byte`.
+=== रिटर्न
+डाटा प्रकार: `link:../../../variables/datatypes/byte[byte]`.
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
-// SEE ALSO SECTION
-[#see_also]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 [role="language"]
-* #LANGUAGE# link:../../../variables/data-types/word[word()]
+* #भाषा# link:../../../variables/data-types/word[word()]
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
