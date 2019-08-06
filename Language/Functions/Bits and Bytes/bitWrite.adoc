@@ -1,7 +1,7 @@
 ---
 title: bitWrite()
-categories: [ "Functions" ]
-subCategories: [ "Bits and Bytes" ]
+categories: [ "कार्यों" ]
+subCategories: [ "बिट्स और बाइट्स" ]
 ---
 
 
@@ -11,53 +11,53 @@ subCategories: [ "Bits and Bytes" ]
 = bitWrite()
 
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-Writes a bit of a numeric variable.
+=== विवरण
+न्यूमेरिक वैरिएबल का थोड़ा लिखता है।
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `bitWrite(x, n, b)`
 
 
 [float]
 === Parameters
-`x`: the numeric variable to which to write. +
-`n`: which bit of the number to write, starting at 0 for the least-significant (rightmost) bit. +
-`b`: the value to write to the bit (0 or 1).
+`x`: संख्यात्मक चर जिस पर लिखना है। +
+`n`: कम से कम महत्वपूर्ण (सबसे दाहिने) के लिए 0 से शुरू होने वाली संख्या को लिखने के लिए कौन सा है। +
+`b`: बिट (0 या 1) को लिखने का मान।
 
 
 [float]
-=== Returns
+=== रिटर्न
 Nothing
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
 
-// HOW TO USE SECTION STARTS
-[#howtouse]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 
 [float]
-=== Example Code
-Demonstrates the use of bitWrite by printing the value of a variable to the Serial Monitor before and after the use of `bitWrite()`.
+=== उदाहरण कोड
+`bitWrite()` के उपयोग से पहले और बाद में सीरियल मॉनीटर पर एक वैरिएबल के मान को प्रिंट करके bitWrite के उपयोग को दर्शाता है।.
 
 
 [source,arduino]
 ----
 void setup() {
   Serial.begin(9600);
-  while (!Serial) {}  // wait for serial port to connect. Needed for native USB port only
-  byte x = 0b10000000;  // the 0b prefix indicates a binary constant
+  while (!Serial) {}  // कनेक्ट करने के लिए सीरियल पोर्ट की प्रतीक्षा करें। केवल देशी यूएसबी पोर्ट के लिए आवश्यक है
+  byte x = 0b10000000;  // 0b उपसर्ग एक द्विआधारी स्थिर इंगित करता है
   Serial.println(x, BIN); // 10000000
-  bitWrite(x, 0, 1);  // write 1 to the least significant bit of x
+  bitWrite(x, 0, 1);  // x का कम से कम महत्वपूर्ण बिट 1 लिखें
   Serial.println(x, BIN); // 10000001
 }
 
@@ -65,15 +65,15 @@ void loop() {}
 ----
 [%hardbreaks]
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
-[#see_also]
+// यह भी देखे खंड
+[#यह_भी_देखे]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
