@@ -1,48 +1,48 @@
 ---
 title: sizeof()
-categories: [ "Variables" ]
-subCategories: [ "Utilities" ]
+categories: [ "चर" ]
+subCategories: [ "उपयोगिताएँ" ]
 ---
 
 = sizeof
 
-// OVERVIEW SECTION STARTS
-[#overview]
+// अवलोकन अनुभाग शुरू होता है
+[#अवलोकन]
 --
 
 [float]
-=== Description
-The `sizeof` operator returns the number of bytes in a variable type, or the number of bytes occupied by an array.
+=== विवरण
+`sizeof` ऑपरेटर एक चर प्रकार में बाइट्स की संख्या देता है, या एक सरणी द्वारा कब्जे में बाइट्स की संख्या|
 [%hardbreaks]
 
 
 [float]
-=== Syntax
+=== वाक्य - विन्यास (Syntax)
 `sizeof(variable)`
 
 
 [float]
-=== Parameters
-`variable`: The thing to get the size of. Allowed data types: any variable type or array (e.g. `int`, `float`, `byte`).
+=== पैरामीटर
+`variable`: आकार पाने की चीज। अनुमत डेटा प्रकार: कोई भी चर प्रकार या सरणी (उदाहरण `int`, `float`, `byte`)|
 
 
 [float]
-=== Returns
-The number of bytes in a variable or bytes occupied in an array. Data type: `size_t`.
+=== रिटर्न
+एक चर में बाइट्स की संख्या एक सरणी में व्याप्त है. डाटा प्रकार: `size_t`.
 
 --
-// OVERVIEW SECTION ENDS
+// ओवरव्यू अनुभाग अंत
 
-// HOW TO USE SECTION STARTS
-[#howtouse]
+// कैसे उपयोग करें खंड की शुरुआत
+[#कैसेउपयोगकरें]
 --
 
 [float]
-=== Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-The `sizeof` operator is useful for dealing with arrays (such as strings) where it is convenient to be able to change the size of the array without breaking other parts of the program.
+=== उदाहरण कोड
+// वर्णन करें कि उदाहरण कोड क्या है और संबंधित कोड जोड़ें   ►►►►► यह खंड अनिवार्य है ◄◄◄◄◄
+`sizeof` संचालक सरणियों (जैसे तार) से निपटने के लिए उपयोगी है, जहां कार्यक्रम के अन्य हिस्सों को तोड़ने के बिना सरणी के आकार को बदलने में सक्षम होना सुविधाजनक है।
 
-This program prints out a text string one character at a time. Try changing the text phrase.
+यह कार्यक्रम एक समय में एक पाठ स्ट्रिंग एक वर्ण को प्रिंट करता है। पाठ वाक्यांश बदलने का प्रयास करें|
 
 [source,arduino]
 ----
@@ -59,37 +59,37 @@ void loop() {
     Serial.write(myStr[i]);
     Serial.println();
   }
-  delay(5000);  // slow down the program
+  delay(5000);  // कार्यक्रम को धीमा करें
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Note that `sizeof` returns the total number of bytes. So for arrays of larger variable types such as ints, the for loop would look something like this.
+=== नोट्स और चेतावनी
+ध्यान दें कि `sizeof` बाइट्स की कुल संख्या लौटाता है। तो बड़े वैरिएबल प्रकार जैसे कि इन्टस के सरणियों के लिए, लूप कुछ इस तरह दिखेगा|
 
 [source,arduino]
 ----
 int myValues[] = {123, 456, 789};
 
-// this for loop works correctly with an array of any type or size
+// लूप के लिए यह किसी भी प्रकार या आकार की एक सरणी के साथ सही ढंग से काम करता है
 for (byte i = 0; i < (sizeof(myValues) / sizeof(myValues[0])); i++) {
-  // do something with myValues[i]
+  // कुछ करो myValues[i]
 }
 ----
 
-Note that a properly formatted string ends with the NULL symbol, which has ASCII value 0.
+ध्यान दें कि एक ठीक से स्वरूपित स्ट्रिंग NULL प्रतीक के साथ समाप्त होती है, जिसमें ASCII मान 0 है|
 
 --
-// HOW TO USE SECTION ENDS
+// कैसे उपयोग करें खंड का अंत
 
 
-// SEE ALSO SECTION
-[#see_also]
+// यह भी देखे खंड
+[#यह_भी_देखे]
 --
 
 [float]
-=== See also
+=== यह भी देखे
 
 --
-// SEE ALSO SECTION ENDS
+// यह भी देखे खंड का अंत
